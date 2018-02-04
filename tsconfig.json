@@ -3,6 +3,7 @@
     "target": "ES6",
     "module": "CommonJS",
     "moduleResolution": "Node",
+    "outDir": "dist",
     "sourceMap": true,
     "pretty": true,
     "strict": true,
@@ -10,5 +11,13 @@
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true
   },
-  "compileOnSave": true
+  "compileOnSave": true,
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts"
+  ]
 }

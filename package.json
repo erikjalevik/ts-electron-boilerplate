@@ -2,10 +2,11 @@
   "name": "ts-electron-boilerplate",
   "version": "1.0.0",
   "description": "A step-by-step setup of Electron with TypeScript and VSCode",
-  "main": "main.js",
+  "main": "dist/main.js",
   "scripts": {
     "compile": "tsc",
-    "start": "tsc && electron .",
+    "start": "npm run compile && npm run copyAssets && electron .",
+    "copyAssets": "cp ./src/*.html ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

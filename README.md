@@ -31,7 +31,7 @@ To avoid having to type the path to the Electron binary all the time, we add an 
 
 `npm install typescript --save-dev`
 
-Then create a `tsconfig.json` containing options for how TypeScript will compile your source files.
+Then create a `tsconfig.json` containing options for how TypeScript will compile your source files. See [tsconfig.json documentation](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) and [TypeScript Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) for reference.
 
 Since we're targeting Electron, which comes with a modern version of Chromium, we should be OK with using `"es6"` as target.
 
@@ -44,3 +44,7 @@ Rename `main.js` to `main.ts` and try:
 `./node_modules/.bin/tsc`
 
 That should compile `main.ts` into a `main.js` file, giving us type errors along the way. Let's fix the type errors and also add the compilation step as a script to `package.json`.
+
+## 5. Configure input and output directories
+
+To keep things tidy, let's modify `tsconfig.json` to look for source files under `src` and to put generated files under `dist`. Since TypeScript only compiles the `.ts` files, we need a separate build step to also copy the static assets over.
