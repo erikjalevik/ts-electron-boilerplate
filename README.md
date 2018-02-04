@@ -36,3 +36,11 @@ Then create a `tsconfig.json` containing options for how TypeScript will compile
 Since we're targeting Electron, which comes with a modern version of Chromium, we should be OK with using `"es6"` as target.
 
 We do however need to set `"module": "CommonJS"` since it seems Node is still not good at handling ES6 modules. This option converts any `import` statements in the TypeScript sources to `require` statements in the generated JavaScript.
+
+## 4. Use TypeScript
+
+Rename `main.js` to `main.ts` and try:
+
+`./node_modules/.bin/tsc`
+
+That should compile `main.ts` into a `main.js` file, giving us type errors along the way. Let's fix the type errors and also add the compilation step as a script to `package.json`.
