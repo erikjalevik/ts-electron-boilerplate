@@ -22,3 +22,7 @@ Test the app by running:
 `./node_modules/.bin/electron ./main.js`
 
 This should display a native app window with some version info.
+
+To avoid having to type the path to the Electron binary all the time, we add an NPM run script allowing us to start the app by doing:
+
+`npm start`
