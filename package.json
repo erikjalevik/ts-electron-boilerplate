@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/erikjalevik/ts-electron-boilerplate/issues"
   },
-  "homepage": "https://github.com/erikjalevik/ts-electron-boilerplate#readme"
+  "homepage": "https://github.com/erikjalevik/ts-electron-boilerplate#readme",
+  "devDependencies": {
+    "electron": "1.7.12"
+  }
 }
