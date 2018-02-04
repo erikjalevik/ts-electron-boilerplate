@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/erikjalevik/ts-electron-boilerplate#readme",
   "devDependencies": {
-    "electron": "1.7.12"
+    "electron": "1.7.12",
+    "typescript": "^2.7.1"
   }
 }

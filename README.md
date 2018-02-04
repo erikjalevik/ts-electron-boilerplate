@@ -26,3 +26,13 @@ This should display a native app window with some version info.
 To avoid having to type the path to the Electron binary all the time, we add an NPM run script allowing us to start the app by doing:
 
 `npm start`
+
+## 3. Install TypeScript
+
+`npm install typescript --save-dev`
+
+Then create a `tsconfig.json` containing options for how TypeScript will compile your source files.
+
+Since we're targeting Electron, which comes with a modern version of Chromium, we should be OK with using `"es6"` as target.
+
+We do however need to set `"module": "CommonJS"` since it seems Node is still not good at handling ES6 modules. This option converts any `import` statements in the TypeScript sources to `require` statements in the generated JavaScript.
