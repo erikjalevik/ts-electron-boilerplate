@@ -1,0 +1,24 @@
+{
+  "name": "ts-electron-boilerplate",
+  "version": "1.0.0",
+  "description": "A step-by-step setup of Electron with TypeScript and VSCode",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikjalevik/ts-electron-boilerplate.git"
+  },
+  "keywords": [
+    "typescript",
+    "electron",
+    "boilerplate"
+  ],
+  "author": "Erik Jälevik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erikjalevik/ts-electron-boilerplate/issues"
+  },
+  "homepage": "https://github.com/erikjalevik/ts-electron-boilerplate#readme"
+}
