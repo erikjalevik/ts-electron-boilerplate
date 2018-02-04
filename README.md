@@ -13,5 +13,12 @@ The npm package used to be called `electron-prebuilt`, but the correct name is n
 
 `--save-exact` is recommended by the Electron team to avoid version conflicts.
 
+## 3. Create a main script
 
+Create the file `main.js` with the standard contents for initialising an Electron app window. Also create an `index.html` containing the initial view for the app window.
 
+Test the app by running:
+
+`./node_modules/.bin/electron ./main.js`
+
+This should display a native app window with some version info.
