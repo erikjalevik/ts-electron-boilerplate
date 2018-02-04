@@ -9,7 +9,8 @@
     "start": "npm run compile && npm run copyAssets && electron .",
     "lint": "tslint ./src/**/*.ts",
     "lint:fix": "tslint --fix ./src/**/*.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config ./jestconfig.json",
+    "test:coverage": "jest --config ./jestconfig.json --coverage"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,10 @@
   },
   "homepage": "https://github.com/erikjalevik/ts-electron-boilerplate#readme",
   "devDependencies": {
+    "@types/jest": "^22.1.1",
     "electron": "1.7.12",
+    "jest": "^22.1.4",
+    "ts-jest": "^22.0.3",
     "tslint": "^5.9.1",
     "tslint-eslint-rules": "^4.1.1",
     "typescript": "^2.7.1"

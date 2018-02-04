@@ -5,6 +5,8 @@
     "tslint-eslint-rules"
   ],
   "jsRules": {},
-  "rules": {},
+  "rules": {
+    "interface-name": false
+  },
   "rulesDirectory": []
 }

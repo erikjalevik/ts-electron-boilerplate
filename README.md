@@ -61,3 +61,17 @@ For a more complete set of rules, we also add the [ESLint rules](https://github.
 `npm install tslint-eslint-rules --save-dev`
 
 We add these to package.json as usual, including a `lint:fix` script for auto-fixing linter problems.
+
+## 7. Add Jest
+
+`npm install jest @types/jest --save-dev`
+
+If doing this on Windows, there will be an error message about `SKIPPING OPTIONAL DEPENDENCY: node-pre-gyp` of module `fsevents`. Since `fsevents` is a Mac-only module, it can probably be safely ignored.
+
+Jest expects to operate on plain JS files, so to be able to test, as well as write tests in, TypeScript files, we need an additional transformer called `ts-jest`.
+
+`npm install ts-jest --save-dev`
+
+Some further configuration is needed, which we put in `jestconfig.json`. Check [Jest configuration documentation](https://facebook.github.io/jest/docs/en/configuration.html) and [ts-jest configuration documentation](https://github.com/kulshekhar/ts-jest#configuration) for more details. To check that it works, let's add a `testable.ts` with corresponding `_tests/testable.spec.ts` and run `npm test`.
+
+
