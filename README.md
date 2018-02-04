@@ -48,3 +48,16 @@ That should compile `main.ts` into a `main.js` file, giving us type errors along
 ## 5. Configure input and output directories
 
 To keep things tidy, let's modify `tsconfig.json` to look for source files under `src` and to put generated files under `dist`. Since TypeScript only compiles the `.ts` files, we need a separate build step to also copy the static assets over.
+
+## 6. Add TSLint
+
+`npm install tslint --save-dev`
+`./node_modules/.bin/tslint --init`
+
+That creates a tslint.json which we can then configure, see [TSLint core rules](https://palantir.github.io/tslint/rules/).
+
+For a more complete set of rules, we also add the [ESLint rules](https://github.com/buzinas/tslint-eslint-rules#rules-copied-from-the-eslint-website):
+
+`npm install tslint-eslint-rules --save-dev`
+
+We add these to package.json as usual, including a `lint:fix` script for auto-fixing linter problems.

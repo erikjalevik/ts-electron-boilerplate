@@ -5,8 +5,10 @@
   "main": "dist/main.js",
   "scripts": {
     "compile": "tsc",
-    "start": "npm run compile && npm run copyAssets && electron .",
     "copyAssets": "cp ./src/*.html ./dist",
+    "start": "npm run compile && npm run copyAssets && electron .",
+    "lint": "tslint ./src/**/*.ts",
+    "lint:fix": "tslint --fix ./src/**/*.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +28,8 @@
   "homepage": "https://github.com/erikjalevik/ts-electron-boilerplate#readme",
   "devDependencies": {
     "electron": "1.7.12",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^4.1.1",
     "typescript": "^2.7.1"
   }
 }
