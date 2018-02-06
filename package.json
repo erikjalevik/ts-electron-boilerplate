@@ -6,7 +6,11 @@
   "scripts": {
     "compile": "tsc",
     "copyAssets": "cp ./src/*.html ./dist",
-    "start": "npm run compile && npm run copyAssets && electron .",
+    "build": "npm run compile && npm run copyAssets",
+    "prestart": "npm run build",
+    "start": "electron .",
+    "watch": "watch \"npm run build\" ./src",
+    "start:watch": "npm run start | npm run watch",
     "lint": "tslint ./src/**/*.ts",
     "lint:fix": "tslint --fix ./src/**/*.ts",
     "test": "jest --config ./jestconfig.json",
@@ -34,6 +38,7 @@
     "ts-jest": "^22.0.3",
     "tslint": "^5.9.1",
     "tslint-eslint-rules": "^4.1.1",
-    "typescript": "^2.7.1"
+    "typescript": "^2.7.1",
+    "watch": "^1.0.2"
   }
 }
